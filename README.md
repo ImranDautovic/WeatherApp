@@ -32,5 +32,5 @@ Imran Dautovic – imrankoo@hotmail.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[https://github.com/ImranDautovic/WeatherApp] (https://github.com/ImranDautovic/WeatherApp)
+https://github.com/ImranDautovic/WeatherApp
 
