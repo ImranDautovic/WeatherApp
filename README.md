@@ -13,11 +13,13 @@ One to two paragraph statement about your product and what it does.
 
 ## Features
 
-- [x] Fetching Weather Forecast from an API: https://api.darksky.net/forecast
-- [x] Displaying Temperature in Celsius
-- [x] Displaying Time and Date convreted from unix timestamp to human readable time
-- [x] Loading an Image from local Assets based on API Icon
+- [x] Consuming Weather Forecast from an API: https://api.darksky.net/forecast
+
 - [x] Displaying Weather Forecast summary 
+
+- [x] Weather Forecast for ten citites in Bosnia and Herzegovina
+
+  
 
 ## Requirements
 
@@ -32,5 +34,5 @@ Imran Dautovic – imrankoo@hotmail.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-https://github.com/ImranDautovic/WeatherApp
+[https://github.com/ImranDautovic/WeatherApp] (https://github.com/ImranDautovic/WeatherApp)
 

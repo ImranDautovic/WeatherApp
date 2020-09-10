@@ -10,36 +10,6 @@ import Foundation
 import UIKit
 
 
-enum Cities: String {
-    case travnik
-    case sarajevo
-    case mostar
-    case tuzla
-    case bihac
-    case jajce
-    case zenica
-    
-    var rawValue: String {
-        switch self {
-        case .travnik:
-            return "Travnik"
-        case .sarajevo:
-            return "Sarajevo"
-        case .mostar:
-            return "Mostar"
-        case .tuzla:
-            return "Tuzla"
-        case .bihac:
-            return "Bihac"
-        case .jajce:
-            return "Jajce"
-        case .zenica:
-            return "Zenica"
-        }
-    }
-    
-}
-
 enum Forecast {
     case sunny
     case cloudy
@@ -75,7 +45,7 @@ enum Forecast {
 //Data Model
 struct Weather {
     
-    var city: Cities
+    //var city: City
     var forecast: Forecast
     
 }

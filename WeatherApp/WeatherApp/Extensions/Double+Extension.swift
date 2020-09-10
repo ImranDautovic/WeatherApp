@@ -12,7 +12,7 @@ extension Double {
     
     var toCelsius: String {
         let calculation: Double = ((self - 32)) / 1.8
-        return ("\(calculation.roundToPlaces(2))")
+        return ("\(Int(calculation.roundToPlaces(0)))")
 }
     
     func roundToPlaces(_ places:Int) -> Double {
