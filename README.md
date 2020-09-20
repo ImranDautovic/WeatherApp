@@ -19,13 +19,16 @@ One to two paragraph statement about your product and what it does.
 
 - [x] Weather Forecast for ten citites in Bosnia and Herzegovina
 
+
+## Dependency Manager
+
+- CocoaPods ( Shell Scripts - SwiftLint and SwiftGen)
   
 
 ## Requirements
 
 - iOS 13.4+
 - Xcode 11.4.1
-
 
 
 ## Meta
