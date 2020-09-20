@@ -32,6 +32,7 @@ class CitiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadData()
+        
     }
     
     func registerCell () {

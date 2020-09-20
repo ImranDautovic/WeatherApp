@@ -59,6 +59,8 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         //weatherIconImageView.image = self.apiFetching.weatherImage
         //self.cityLabel.text = self.weather?.city.rawValue
 
