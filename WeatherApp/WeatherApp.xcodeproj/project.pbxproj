@@ -10,6 +10,7 @@
 		442D871A250AD42E00658ACF /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442D8719250AD42E00658ACF /* WeatherAppTests.swift */; };
 		445E7024250BF82700C19232 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 445E7023250BF82700C19232 /* .swiftlint.yml */; };
 		445E7027250C158700C19232 /* UIStoryboard+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445E7026250C158700C19232 /* UIStoryboard+UIViewController.swift */; };
+		445E70B7251A602600C19232 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445E70B6251A602600C19232 /* Networking.swift */; };
 		5F18DE5724FAB7C40079C303 /* Cities.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F18DE5624FAB7C40079C303 /* Cities.xcassets */; };
 		5F18DE5B24FAB9F70079C303 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F18DE5A24FAB9F70079C303 /* Cities.swift */; };
 		5F18DE5E24FABA880079C303 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F18DE5D24FABA880079C303 /* GradientView.swift */; };
@@ -46,6 +47,7 @@
 		442D871B250AD42E00658ACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		445E7023250BF82700C19232 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		445E7026250C158700C19232 /* UIStoryboard+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+UIViewController.swift"; path = "WeatherApp/UIStoryboard+UIViewController.swift"; sourceTree = SOURCE_ROOT; };
+		445E70B6251A602600C19232 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		4EDA086A92EA03335B177C14 /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5F18DE5624FAB7C40079C303 /* Cities.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Cities.xcassets; sourceTree = "<group>"; };
 		5F18DE5A24FAB9F70079C303 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				5F18DE6624FAF1460079C303 /* WeatherViewController.swift */,
 				5F18DE6824FAF1710079C303 /* CitiesViewController.swift */,
 				445E7026250C158700C19232 /* UIStoryboard+UIViewController.swift */,
+				445E70B6251A602600C19232 /* Networking.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				5F575AC324F150DD00BB7579 /* Double+Extension.swift in Sources */,
 				5F18DE6924FAF1710079C303 /* CitiesViewController.swift in Sources */,
 				445E7027250C158700C19232 /* UIStoryboard+UIViewController.swift in Sources */,
+				445E70B7251A602600C19232 /* Networking.swift in Sources */,
 				5F18DE6724FAF1460079C303 /* WeatherViewController.swift in Sources */,
 				5FA3C3FC24E07C5300A7846E /* Weather.swift in Sources */,
 				5F575AC524F155D800BB7579 /* Int+Extension.swift in Sources */,

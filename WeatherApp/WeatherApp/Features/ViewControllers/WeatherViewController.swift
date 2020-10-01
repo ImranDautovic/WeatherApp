@@ -9,7 +9,7 @@
 import UIKit
 
 class WeatherViewController: UIViewController {
-
+    
     //MARK: - Outlets -
     
     @IBOutlet var gradientOutlet: Gradient!
@@ -50,42 +50,77 @@ class WeatherViewController: UIViewController {
                 self.summaryLabel.text = self.apiFetching.summary
                 self.weatherIconImageView.image = self.apiFetching.weatherImage
                 //self.cityLabel.text = self.apiFetching.timezone
-
-        }
+                
+            }
         }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.performNetworkRequest(request: WeatherNetworkService.summary)
+        self.performNetworkRequest(request: WeatherNetworkService.temperature)
+        self.performNetworkRequest(request: WeatherNetworkService.time)
         
         
         
         //weatherIconImageView.image = self.apiFetching.weatherImage
         //self.cityLabel.text = self.weather?.city.rawValue
-
+        
     }
+    
     func fetchData(){
         let baseURL: String = "https://api.darksky.net/forecast"
-                let key: String = "ddcc4ebb2a7c9930b90d9e59bda0ba7a"
+        let key: String = "ddcc4ebb2a7c9930b90d9e59bda0ba7a"
         let url: URL = URL (string: "\(baseURL)/\(key)/\(self.latitude),\(self.longitude)?exclude=[flags,minutely,hourly]")!
-                
-                    let session = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-                        do {
-                            if let jsonResponse = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : Any], let results = jsonResponse["currently"] as? [String : Any]  {
-                                self.apiFetching = ApiFetch(results)
-                            }else {
-                                    print("Parsiranje nije uspjelo")
-                            }
-                        } catch let parsingError {
-                            print ("Error", parsingError)
-                        }
-                    })
-                    session.resume()
         
+        let session = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+            do {
+                if let jsonResponse = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : Any], let results = jsonResponse["currently"] as? [String : Any]  {
+                    self.apiFetching = ApiFetch(results)
+                }else {
+                    print("Parsiranje nije uspjelo")
                 }
-     
+            } catch let parsingError {
+                print ("Error", parsingError)
+            }
+        })
+        session.resume()
+        
+    }
+    
+    
+    
+    
+    func performNetworkRequest(request: API){
+        let task = URLSession.shared.dataTask(with: request.urlRequest) { (data, response, error) in
+            guard let data = data else { return }
+            
+            let serial = (String(data: data, encoding: .utf8))
+            
+        }
+        
+        task.resume()
+    }
+
+    
 }
+
+/*/MARK: - Fetching Data -
+
+func performNetworkRequest(request: API){
+    let task = URLSession.shared.dataTask(with: request.urlRequest) { (data, response, error) in
+        guard let data = data else { return }
+        
+        let serial = (String(data: data, encoding: .utf8))
+        
+    }
+    
+    task.resume()
+}
+*/
+
+
 
 fileprivate extension WeatherViewController {
     
@@ -103,8 +138,8 @@ fileprivate extension WeatherViewController {
         
         vc.delegate = self
         self.present(vc, animated: true, completion: nil)
-    
-}
+        
+    }
 }
 
 //MARK: - Cities View Controller Delegate -
